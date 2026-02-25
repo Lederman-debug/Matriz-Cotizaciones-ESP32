@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "author": "Anthonio Rodriguez",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -307.2, "left": 52.84, "attrs": {} },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix1",
+      "top": -9,
+      "left": -232.56,
+      "attrs": { "chain": "4" }
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix2",
+      "top": -9,
+      "left": 74.64,
+      "attrs": { "chain": "4" }
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix3",
+      "top": 67.8,
+      "left": -232.56,
+      "attrs": { "chain": "4" }
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix4",
+      "top": 67.8,
+      "left": 74.64,
+      "attrs": { "chain": "4" }
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix5",
+      "top": 144.6,
+      "left": -232.56,
+      "attrs": { "chain": "4" }
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix6",
+      "top": 144.6,
+      "left": 74.64,
+      "attrs": { "chain": "4" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "matrix1:V+", "esp:5V", "red", [ "h48", "v9.6" ] ],
+    [ "matrix1:GND", "esp:GND.1", "black", [ "h38.4", "v96" ] ],
+    [ "matrix1:DIN", "esp:25", "blue", [ "h28.8", "v38.4" ] ],
+    [ "matrix1:CLK", "esp:27", "green", [ "h9.6", "v38.4" ] ],
+    [ "matrix1:CS", "esp:26", "gold", [ "h19.2", "v48" ] ],
+    [ "matrix2:V+", "esp:5V", "red", [ "h48", "v9.6" ] ],
+    [ "matrix2:GND", "esp:GND.1", "black", [ "h38.4", "v96" ] ],
+    [ "matrix2:DIN", "esp:25", "blue", [ "h28.8", "v38.4" ] ],
+    [ "matrix2:CLK", "esp:27", "green", [ "h9.6", "v38.4" ] ],
+    [ "matrix2:CS", "esp:14", "magenta", [ "h19.2", "v48" ] ],
+    [ "matrix3:V+", "esp:5V", "red", [ "h48", "v9.6" ] ],
+    [ "matrix3:GND", "esp:GND.1", "black", [ "h38.4", "v96" ] ],
+    [ "matrix3:DIN", "esp:25", "blue", [ "h28.8", "v38.4" ] ],
+    [ "matrix3:CLK", "esp:27", "green", [ "h9.6", "v38.4" ] ],
+    [ "matrix3:CS", "esp:32", "cyan", [ "h19.2", "v48" ] ],
+    [ "matrix4:V+", "esp:5V", "red", [ "h48", "v9.6" ] ],
+    [ "matrix4:GND", "esp:GND.1", "black", [ "h38.4", "v96" ] ],
+    [ "matrix4:DIN", "esp:25", "blue", [ "h28.8", "v38.4" ] ],
+    [ "matrix4:CLK", "esp:27", "green", [ "h9.6", "v38.4" ] ],
+    [ "matrix4:CS", "esp:33", "yellow", [ "h19.2", "v48" ] ],
+    [ "matrix5:V+", "esp:5V", "red", [ "h48", "v9.6" ] ],
+    [ "matrix5:GND", "esp:GND.1", "black", [ "h38.4", "v96" ] ],
+    [ "matrix5:DIN", "esp:25", "blue", [ "h28.8", "v38.4" ] ],
+    [ "matrix5:CLK", "esp:27", "green", [ "h9.6", "v38.4" ] ],
+    [ "matrix5:CS", "esp:15", "orange", [ "h19.2", "v48" ] ],
+    [ "matrix6:V+", "esp:5V", "red", [ "h48", "v9.6" ] ],
+    [ "matrix6:GND", "esp:GND.1", "black", [ "h38.4", "v96" ] ],
+    [ "matrix6:DIN", "esp:25", "blue", [ "h28.8", "v38.4" ] ],
+    [ "matrix6:CLK", "esp:27", "green", [ "h9.6", "v38.4" ] ],
+    [ "matrix6:CS", "esp:2", "purple", [ "h19.2", "v48" ] ]
+  ],
+  "dependencies": {}
+}
